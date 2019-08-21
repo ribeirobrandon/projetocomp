@@ -1,0 +1,9 @@
+inteiro<10>: vetor!
+real: A!                  
+inteiro: i!                         
+
+inicio
+    para i~0 ate i~10 faca passo 1 
+        tela vetor<i>!    
+    fim_para            
+fim
