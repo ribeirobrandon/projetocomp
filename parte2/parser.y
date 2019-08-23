@@ -170,6 +170,14 @@ fator: termo
 
                                 $$ = novo_no("termo", filhos, 3);
                                 }
+    | fator OPERADOR_POT termo {
+                                No** filhos = (No**) malloc(sizeof(No*)*3);
+                                filhos[0] = $1;
+                                filhos[1] = novo_no("^", NULL, 0);
+                                filhos[2] = $3;
+
+                                $$ = novo_no("termo", filhos, 3);
+    }
     
 ;
 
