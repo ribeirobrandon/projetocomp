@@ -34,7 +34,7 @@ IDENTIFICADOR	        "inteiro"|"real"|"ABC"
 RESERVED_WORDS          "inicio"|"tela"|"leia"|"fim"
 NUMBER				    ([0-9]+)*
 VARIAVEL		        [_a-zA-Z][_a-zA-Z0-9]*
-OPERADOR_MATEMATICO     "+"|"\/"|"-"|"**"
+OPERADOR_MATEMATICO     "+"|"\/"|"-"|"**"|"^"
 OPERADOR_UNARIO			"++"|"--"
 OPERADOR_LOGICO			")"|"("|"=)"|"(="|"="|"#"|"&&"|"||"
 OPERADOR_ATRIBUICAO		"~"|":"
