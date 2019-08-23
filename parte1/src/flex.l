@@ -38,7 +38,7 @@ OPERADOR_MATEMATICO     "+"|"\/"|"-"|"**"
 OPERADOR_UNARIO			"++"|"--"
 OPERADOR_LOGICO			")"|"("|"=)"|"(="|"="|"#"|"&&"|"||"
 OPERADOR_ATRIBUICAO		"~"|":"
-CONDICIONAL				"se"|"entao"|"fim_se"|"switch"
+CONDICIONAL				"se"|"entao"|"fim_se"|"escolha"
 LOOP					"enquanto"|"para"|"ate"|"faca"|"passo"|"fim_para"
 ABERTURA_FUNCAO			"\("|"\{"
 FECHAMENTO_FUNCAO		"\)"|"\}"
@@ -69,7 +69,7 @@ EXCLAMACAO              "!"
 "&"+{VARIAVEL}+"<"+{NUMBER}+">"|"&"+{VARIAVEL}+"<"+{VARIAVEL}+">"|"&"+{VARIAVEL}		{printf("<leitura de vetor, '%s'> ", yytext); contador++;}
 {OPERADOR_LOGICO}										                                {printf("<operador_logico, '%s'> ", yytext); contador++;}
 {OPERADOR_ATRIBUICAO}								                                    {printf("<operador_atribuição,  '%s'> ", yytext); contador++;}
-"-"?|"+"?{NUMBER}														                {printf("<numero, '%s'> ", yytext); contador++;}
+"-"?|"+"?|"**"?|"\/"?|"^"? {NUMBER}									                    {printf("<numero, '%s'> ", yytext); contador++;}
 "<"+{NUMBER}+">"										                                {printf("<tamanho do vetor, '%s'> ", yytext); contador++;}
 {NUMBER}+"."+{NUMBER}								                                    {printf("<ponto_flutuante, '%s'> ", yytext); contador++;}
 '+{VARIAVEL}+'											                                {printf("<caracter, '%s'> ", yytext); contador++;}
