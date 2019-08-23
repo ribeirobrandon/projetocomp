@@ -1,10 +1,5 @@
 %{
 
-/* Código C, use para #include, variáveis globais e constantes
- * este código ser adicionado no início do arquivo fonte em C
- * que será gerado.
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 
